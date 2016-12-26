@@ -6,6 +6,11 @@ $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
 echo 'running';
+echo $event;
+
+
+echo $event['userId'];
+echo '1\r\n';
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
 	// Loop through each event
@@ -23,9 +28,6 @@ if (!is_null($events['events'])) {
 				'text' => $text
 			];
 
-			echo $event;
-			echo $event['userId'];
-			echo '1\r\n';
 			// // Make a POST Request to Messaging API to reply to sender
 			// $url = 'https://api.line.me/v2/bot/message/reply';
 			// $data = [
