@@ -121,7 +121,7 @@ class LINEBot
     public function pushMessage($to, MessageBuilder $messageBuilder)
     {
         return $this->httpClient->post($this->endpointBase . '/v2/bot/message/push', [
-            'to' => $to,
+            'to' => 'test',
             'messages' => $messageBuilder->buildMessage(),
         ]);
     }
