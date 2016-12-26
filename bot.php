@@ -23,6 +23,8 @@ if (!is_null($events['events'])) {
 			];
 
 			echo $event;
+			echo $event['userId'];
+			echo '1\r\n';
 			// // Make a POST Request to Messaging API to reply to sender
 			// $url = 'https://api.line.me/v2/bot/message/reply';
 			// $data = [
