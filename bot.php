@@ -6,10 +6,7 @@ $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
 echo 'running';
-echo $event;
-
-
-echo $event['userId'];
+echo $events['events'];
 echo '1\r\n';
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
