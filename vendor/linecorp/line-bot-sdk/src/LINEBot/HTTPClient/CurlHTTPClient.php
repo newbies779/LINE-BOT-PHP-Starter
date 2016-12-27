@@ -127,7 +127,6 @@ class CurlHTTPClient implements HTTPClient
         }
 
         $body = substr($result, $responseHeaderSize);
-        var_dump($result, $body);die();
         return new Response($httpStatus, $body, $responseHeaders);
     }
 }
