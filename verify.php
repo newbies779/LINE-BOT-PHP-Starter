@@ -2,7 +2,7 @@
 
 $access_token = '7xGXQTgIeNebLt9q7UtuY8TdPI6T8eAx1WxsHp5i38siySOMQrZ5wyc0A1xUFpLQ9s7DErBfFTdmeM3Gw73Clgxb4wN5uWpfGNgU68VkOFZMBu9ss2axWxrwMLfVR1WSBl7r02mgEKMO2pA59QVgKwdB04t89/1O/w1cDnyilFU=';
 
-$url = 'https://api.line.me/v2/bot/profile/u986352e98748ad741ecb94468ed2f7e0';
+$url = 'https://api.line.me/v2/bot/profile/U434e463205df5cd14b34922a38cb4c84';
 
 $headers = array('Authorization: Bearer ' . $access_token);
 
