@@ -68,6 +68,9 @@ if (!is_null($events['events'])) {
 				}
 			}
 
+			if(strlen($mes) >= 2000){
+				$mes = substr($mes, 0, 1998);
+			}
 			// Build message to reply back
 			$messages = [
 			'type' => 'text',
