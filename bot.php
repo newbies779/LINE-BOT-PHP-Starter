@@ -59,25 +59,7 @@ if (!is_null($events['events'])) {
 						$mes = 'ไม่พบข้อมูล'; 
 					}
 				}
-				//Ask weather
-				if(strtolower($exploded_text[1] == 'weather')){
-					$ch1 = curl_init(); 
-					curl_setopt($ch1, CURLOPT_SSL_VERIFYPEER, false); 
-					curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true); 
-					curl_setopt($ch1, CURLOPT_URL, 'http://api.wunderground.com/api/c725528b02d87d0a/forecast/lang:TH/q/Thailand/'.str_replace(' ', '%20', $exploded_text[2]).'.json'); 
-					$result1 = curl_exec($ch1); 
-					curl_close($ch1); 
-					$obj = json_decode($result1, true); 
-
-					if(isset($obj['forecast']['txt_forecast']['forecastday'][0]['fcttext_metric'])){ 
-						$mes = $obj['forecast']['txt_forecast']['forecastday'][0]['fcttext_metric']; 
-					}else{
-						$mes = 'ไม่พบข้อมูล'; 
-					}
-				}
 			}
-
-
 
 			// Build message to reply back
 			$messages = [
