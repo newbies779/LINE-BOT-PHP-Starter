@@ -60,7 +60,7 @@ if (!is_null($events['events'])) {
 						$obj = json_decode($result1, true); 
 
 						foreach($obj['query']['pages'] as $key => $val){ 
-							$mes = $val['title']; 
+							$mes = $val['extract']; 
 						} 
 					} if(empty($mes)){
 						$mes = 'ไม่พบข้อมูล'; 
