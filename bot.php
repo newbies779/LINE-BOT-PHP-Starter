@@ -5,7 +5,7 @@ $access_token = '7xGXQTgIeNebLt9q7UtuY8TdPI6T8eAx1WxsHp5i38siySOMQrZ5wyc0A1xUFpL
 $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
-echo 'updated';
+echo 'updated1';
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
 	// Loop through each event
@@ -43,7 +43,8 @@ if (!is_null($events['events'])) {
 						if($key == '-1'){
 							$res = 'not found';
 						}
-						$mes = $val['extract']; 
+						$mes = $val['extract'];
+						$res = 'found'; 
 					}
 
 
@@ -69,7 +70,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			$messages = [
 			'type' => 'text',
-			'text' => $mes
+			'text' => $res
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
