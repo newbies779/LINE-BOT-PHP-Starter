@@ -46,7 +46,6 @@ if (!is_null($events['events'])) {
 							$mes = $val['extract'];
 							$res = 'found'; 
 						}
-						
 					}
 
 
@@ -72,7 +71,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			$messages = [
 			'type' => 'text',
-			'text' => $res
+			'text' => $mes
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
