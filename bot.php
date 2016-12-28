@@ -5,7 +5,7 @@ $access_token = '7xGXQTgIeNebLt9q7UtuY8TdPI6T8eAx1WxsHp5i38siySOMQrZ5wyc0A1xUFpL
 $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
-echo 'running';
+echo 'running test';
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
 	// Loop through each event
@@ -17,7 +17,7 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
-			if(strpos($text, 'bot:giveID')){
+			if($text == 'bot:giveID'){
 				if(isset($event['source']['userId'])){
 					$mes = $event['source']['userId'];
 				}else if(isset($event['source']['groupId'])){
