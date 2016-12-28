@@ -62,6 +62,7 @@ if (!is_null($events['events'])) {
 						foreach($obj['query']['pages'] as $key => $val){ 
 							$mes = $val['extract']; 
 						} 
+						$mes='test';
 					} if(empty($mes)){
 						$mes = 'ไม่พบข้อมูล'; 
 					}
