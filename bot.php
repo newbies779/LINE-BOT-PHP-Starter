@@ -42,9 +42,11 @@ if (!is_null($events['events'])) {
 					foreach($obj['query']['pages'] as $key => $val){
 						if($key == '-1'){
 							$res = 'not found';
+						}else{
+							$mes = $val['extract'];
+							$res = 'found'; 
 						}
-						$mes = $val['extract'];
-						$res = $key; 
+						
 					}
 
 
