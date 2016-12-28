@@ -39,11 +39,16 @@ if (!is_null($events['events'])) {
 					curl_close($ch1); 
 					$obj = json_decode($result1, true); 
 
-					foreach($obj['query']['pages'] as $key => $val){ 
+					foreach($obj['query']['pages'] as $key => $val){
+						if($key == '-1'){
+							$res = 'not found';
+						}
 						$mes = $val['extract']; 
 					}
+
+
 					//If th doesn't have information
-					if(empty($mes)){
+					if($res == 'not found'){
 						$ch1 = curl_init(); 
 						curl_setopt($ch1, CURLOPT_SSL_VERIFYPEER, false); 
 						curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true); 
